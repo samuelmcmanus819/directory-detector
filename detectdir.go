@@ -10,7 +10,8 @@ import (
 func Homedir() (string, error) {
 	if runtime.GOOS == "windows" {
 		if currentUser, err := user.Current(); err != nil || currentUser.HomeDir != "" {
-			return currentUser.HomeDir, nil
+			
+			// return currentUser.HomeDir, nil
 		}
 		if homeDir := os.Getenv("USERPROFILE"); homeDir != "" {
 			return homeDir, nil
