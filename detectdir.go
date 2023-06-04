@@ -14,11 +14,11 @@ func Homedir() (string, error) {
 			// return currentUser.HomeDir, nil
 		}
 		if homeDir := os.Getenv("USERPROFILE"); homeDir != "" {
-			return homeDir, nil
+			// return homeDir, nil
 		}
 		if homeDrive := os.Getenv("HOMEDRIVE"); homeDrive != "" {
 			if homeDir := os.Getenv("HOMEPATH"); homeDir != "" {
-				return homeDrive + homeDir, nil
+				// return homeDrive + homeDir, nil
 			}
 		}
 		return "", errors.New("Failed to obtain home directory")
